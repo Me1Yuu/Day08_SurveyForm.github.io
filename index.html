@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+
+<body>
+    <h1>Day 8 of the ChatGPT challenge</h1>
+    <h2>Survey Form</h2>
+
+    <ol>
+        <li>Do a main heading like e.g. "Tell Me About You!"</li>
+        <li>Do a &lt;form&gt; element that includes:</li>
+        <ol>
+            <li>An &lt;input&gt; element that includes:</li>
+            <ul>
+                <li>Each Input has a &lt;label&gt;</li>
+                <li>Text Input: &lt;input type="text"&gt;</li>
+                <li>Email input</li>
+                <li>multiple checkbox inputs with different labels like: gaming, reading, etc.</li>
+                <li>radio input</li>
+                <li>Use a &lt;textarea&gt; element</li>
+                <li>Do a submit &lt;button&gt;. You can use &lt;input&gt; or &lt;button&gt; for that.</li>
+            </ul>
+        </ol>
+    </ol>
+    <hr>
+    <h1>Tell Me About You</h1>
+    <!-- <form> wraps all input fields -->
+    <form action="">
+        <!-- <label> describes each input (is's important for accessibility) -->
+        <label for="name">Name:</label>
+        <!-- <input> creates different types of user fields -->
+         <!-- the "required" attribute works with input types and files. It cannot be submitted without its value -->
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label>How do you prefer to learn?</label><br>
+        <!-- The radio group must share the same "name" to be treated as a group. It also helps to select only one button -->
+        <!-- The "value" attribute defines the unique value for each button. So the "submit" button can identify which on was selected -->
+        <input type="radio" name="name" value="text">
+        <label for="text">Text</label><br>
+        <input type="radio" name="name" value="video">
+        <label for="video">Video</label><br>
+        <input type="radio" name="name" value="ai">
+        <label for="ai">AI</label><br><br>
+
+        <label>Interests:</label><br>
+        <!-- <checkbox> -->
+        <input type="checkbox">
+        <label for="gaming">Gaming</label><br>
+        <input type="checkbox">
+        <label for="reading">Reading</label><br>
+        <input type="checkbox">
+        <label for="sports">Sleeping</label><br>
+        <label for="coding"></label>
+        <input type="checkbox">
+        <label for="coding">Coding</label><br><br>
+
+        <label for="comments">Comments:</label><br>
+        <textarea id="comments" name="comments"></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
